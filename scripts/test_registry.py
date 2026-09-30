@@ -11,7 +11,7 @@ class RegistryTest(unittest.TestCase):
         for p in catalog['plugins']:
             source = p['source']; relative = f"packages/{p['name']}/{p['version']}/plugin.zip"
             self.assertEqual(source['url'], f'https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/{relative}')
-            self.assertEqual(source['mirrors'], [f'https://gitee.com/wangyue2006/xharness-plugin-registry/raw/main/{relative}'])
+            self.assertEqual(source['mirrors'], [f'https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/{relative}'])
             data = (ROOT / relative).read_bytes()
             self.assertEqual(hashlib.sha256(data).hexdigest(), source['sha256'])
             with zipfile.ZipFile(ROOT / relative) as z:

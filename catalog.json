@@ -13,7 +13,7 @@
         "type": "zip",
         "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/github/0.2.0/plugin.zip",
         "mirrors": [
-          "https://gitee.com/wangyue2006/xharness-plugin-registry/raw/main/packages/github/0.2.0/plugin.zip"
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/github/0.2.0/plugin.zip"
         ],
         "sha256": "2f1b40aadb5d8ee52af7e678f85fa7ab836f8835202e86c22ee388e3e98f9ab5"
       }

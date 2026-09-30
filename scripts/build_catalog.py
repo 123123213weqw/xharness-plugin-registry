@@ -28,6 +28,6 @@ def build():
             'description_i18n': {'zh-CN': 'XHarness 原创 GitHub CLI 技能，覆盖提交、PR、Issue、发布、CI、Secret、仓库、Gist 和 Codespaces。'},
             'source': {'source': 'url', 'type': 'zip',
                 'url': f'https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/{relative}',
-                'mirrors': [f'https://gitee.com/wangyue2006/xharness-plugin-registry/raw/main/{relative}'], 'sha256': digest}})
+                'mirrors': [f'https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/{relative}'], 'sha256': digest}})
     (ROOT / 'catalog.json').write_text(json.dumps({'plugins': rows}, indent=2, ensure_ascii=False) + '\n')
 if __name__ == '__main__': build()

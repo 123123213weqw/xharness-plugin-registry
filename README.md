@@ -5,7 +5,7 @@
 ## 下载
 
 - GitHub: https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/catalog.json
-- Gitee mirror: https://gitee.com/wangyue2006/xharness-plugin-registry/raw/main/catalog.json
+- Gitee mirror: https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/catalog.json
 
 镜像未上线或更新延迟时，客户端可回退另一源。两个源必须分发同一份 zip，并使用同一 SHA-256。插件包可匿名下载；安装和启用是分别由用户选择的动作。
 
@@ -17,3 +17,5 @@
 `python3 scripts/test_registry.py` 校验哈希、内容、目录及双源地址，CI 运行同样的检查。
 发布新版本请增加不可变的 packages/<plugin>/<version>/plugin.zip；不要原地替换已发布包。
 Gitee 镜像由主 XHarness 仓库的专用工作流复用现有 Gitee Secret 同步；不在公开 registry 中保存 token。
+
+Gitee 使用匿名 Contents API；XHarness 下载适配器校验 `type=file`、`encoding=base64`、大小并还原文件字节，最终与 GitHub 包做同一 SHA-256 校验。避免依赖 Raw 页面跳转/CDN 的可达性。
