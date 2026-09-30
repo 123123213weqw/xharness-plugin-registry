@@ -1,0 +1,9 @@
+{
+  "name": "github",
+  "version": "0.2.0",
+  "description": "XHarness GitHub CLI workflows",
+  "license": "MIT",
+  "author": {
+    "name": "XHarness"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    {
+      "name": "github",
+      "version": "0.2.0",
+      "category": "developer-tools",
+      "description": "XHarness GitHub CLI workflows for commits, pull requests, issues, releases, Actions, secrets, repositories, Gists and Codespaces.",
+      "description_i18n": {
+        "zh-CN": "XHarness 原创 GitHub CLI 技能，覆盖提交、PR、Issue、发布、CI、Secret、仓库、Gist 和 Codespaces。"
+      },
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/github/0.2.0/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/wangyue2006/xharness-plugin-registry/raw/main/packages/github/0.2.0/plugin.zip"
+        ],
+        "sha256": "2f1b40aadb5d8ee52af7e678f85fa7ab836f8835202e86c22ee388e3e98f9ab5"
+      }
+    }
+  ]
+}
