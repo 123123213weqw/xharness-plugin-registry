@@ -1,13 +1,90 @@
 {
   "plugins": [
     {
+      "name": "browser",
+      "version": "0.1.0-beta.1",
+      "category": "developer-tools",
+      "description": "Observed browser interaction guidance. Beta; requires an available browser automation backend, not bundled here.",
+      "descriptionI18n": {
+        "zh-CN": "浏览器助手：观察、交互与结果验证。测试版，需可用的浏览器执行后端，不内置浏览器。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/browser.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/browser/0.1.0-beta.1/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/browser/0.1.0-beta.1/plugin.zip"
+        ],
+        "sha256": "fb7e2bb7135ffce414ea70333d9e35f7425dc616d35412a5bb23795fb6458684"
+      }
+    },
+    {
+      "name": "debugging",
+      "version": "0.1.0-beta.1",
+      "category": "developer-tools",
+      "description": "Reproduce failures, investigate hypotheses and verify minimal repairs. Beta; root-cause reports can be wrong.",
+      "descriptionI18n": {
+        "zh-CN": "故障排查：复现、验证假设、最小修复与回归。测试版，根因结论需复核。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/debug.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/debugging/0.1.0-beta.1/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/debugging/0.1.0-beta.1/plugin.zip"
+        ],
+        "sha256": "69a1a49ca91f195d4b662d94574f8eb0ea06e0b776166446578104378784e33b"
+      }
+    },
+    {
+      "name": "documents",
+      "version": "0.1.0-beta.1",
+      "category": "productivity",
+      "description": "Bounded Word, spreadsheet, presentation and PDF workflows. Beta; Python/Node dependencies must be provisioned separately.",
+      "descriptionI18n": {
+        "zh-CN": "文档助手：Word、Excel、PowerPoint、PDF 的有限处理流程。测试版，需要另行配置 Python／Node 依赖。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/documents.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/documents/0.1.0-beta.1/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/documents/0.1.0-beta.1/plugin.zip"
+        ],
+        "sha256": "806225d13c7740b8a1d36f62a627994834ff8888ed71e3a71b744f8dcb32791e"
+      }
+    },
+    {
+      "name": "git-pr-workflows",
+      "version": "0.1.0-beta.1",
+      "category": "developer-tools",
+      "description": "Git change delivery and evidence-grounded PR preparation. Beta; external workflows are not fully validated.",
+      "descriptionI18n": {
+        "zh-CN": "Git／PR 工作流：整理变更、提交与 PR 证据。测试版，远端完整流程仍在验收。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/git-branch.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/git-pr-workflows/0.1.0-beta.1/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/git-pr-workflows/0.1.0-beta.1/plugin.zip"
+        ],
+        "sha256": "aedab38ac3f731485fd7062f38a7ee4f02bf68dc61db8735441facd7f8a14914"
+      }
+    },
+    {
       "name": "github",
       "version": "0.2.0",
       "category": "developer-tools",
-      "description": "XHarness GitHub CLI workflows for commits, pull requests, issues, releases, Actions, secrets, repositories, Gists and Codespaces.",
-      "description_i18n": {
-        "zh-CN": "XHarness 原创 GitHub CLI 技能，覆盖提交、PR、Issue、发布、CI、Secret、仓库、Gist 和 Codespaces。"
+      "description": "GitHub CLI workflows for commits, PRs, Issues, releases and Actions. Requires gh and user-owned authentication.",
+      "descriptionI18n": {
+        "zh-CN": "GitHub CLI 工作流：提交、PR、Issue、发布及 Actions。需要 gh 和用户自己的授权。"
       },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/github.svg",
       "source": {
         "source": "url",
         "type": "zip",
@@ -16,6 +93,63 @@
           "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/github/0.2.0/plugin.zip"
         ],
         "sha256": "2f1b40aadb5d8ee52af7e678f85fa7ab836f8835202e86c22ee388e3e98f9ab5"
+      }
+    },
+    {
+      "name": "pr-review",
+      "version": "0.1.0-beta.1",
+      "category": "developer-tools",
+      "description": "Review code, tests, errors, comments and types with source-located findings. Beta; review-only unless edits are requested.",
+      "descriptionI18n": {
+        "zh-CN": "代码审查：检查代码、测试、异常、注释及类型，给出有位置和证据的建议。测试版。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/review.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/pr-review/0.1.0-beta.1/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/pr-review/0.1.0-beta.1/plugin.zip"
+        ],
+        "sha256": "24e690e077345d6d478078a590e49876f339a2eb3cd7395d3fcfb86eb14d70f1"
+      }
+    },
+    {
+      "name": "refactoring",
+      "version": "0.1.0-beta.1",
+      "category": "developer-tools",
+      "description": "Incremental behavior-preserving refactoring and migration planning. Beta; supported project tests remain authoritative.",
+      "descriptionI18n": {
+        "zh-CN": "代码重构：拆分职责、消除重复、渐进迁移并验证行为兼容。测试版。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/refactor.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/refactoring/0.1.0-beta.1/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/refactoring/0.1.0-beta.1/plugin.zip"
+        ],
+        "sha256": "c750c4afe1898d96089bd04d79249eb9d6c5136bf38be7f575538688fb71d00e"
+      }
+    },
+    {
+      "name": "unit-testing",
+      "version": "0.1.0-beta.1",
+      "category": "developer-tools",
+      "description": "Behavior-grounded test generation and failure diagnosis. Beta; test coverage and report claims require verification.",
+      "descriptionI18n": {
+        "zh-CN": "单元测试：补行为、边界和异常测试，诊断测试失败。测试版，覆盖声明需实际验证。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/test.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/unit-testing/0.1.0-beta.1/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/unit-testing/0.1.0-beta.1/plugin.zip"
+        ],
+        "sha256": "22d8d32377684b0101ca0e9248f367103ad258780733c2475a069f5bf04314df"
       }
     }
   ]

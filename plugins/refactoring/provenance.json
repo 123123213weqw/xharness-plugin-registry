@@ -1,0 +1,75 @@
+{
+  "release_channel": "beta",
+  "source_repository": "https://github.com/123123213weqw/xharness-plugins",
+  "reference_commit": "903913d6ec14c752be7470df06609bf2796eaa79",
+  "reference_family": "wshobson-agents/code-refactoring",
+  "method": "Independent XHarness workflow guidance and own support code; reference vendor executables are not bundled or executed.",
+  "upstream_notices_retained": true,
+  "full_source_platform_or_license_equivalence_claimed": false,
+  "scope": "Finite tested capabilities only. Read RELEASE.md for prerequisites and unsupported behavior.",
+  "reference_source_files": [
+    {
+      "path": "mirrors/wshobson-agents/plugins/code-refactoring/.claude-plugin/plugin.json",
+      "sha256": "2cf4734925da8b89498fe1f8d59d8238fa9110d742b775316a1f8587ac22d6f4",
+      "bytes": 269,
+      "role": "manifest"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/code-refactoring/.codex-plugin/plugin.json",
+      "sha256": "6c1c27e46f2a841d53eda69ac1fd1f5c35b7760cfb423697a1464c1cc6fdd6d2",
+      "bytes": 500,
+      "role": "manifest"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/code-refactoring/agents/code-reviewer.md",
+      "sha256": "d73ca30b44a0355a270ba2a9008826b00b9b3a18ad180def0633900e7192d0dd",
+      "bytes": 8432,
+      "role": "agent"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/code-refactoring/agents/legacy-modernizer.md",
+      "sha256": "99e479e746b011d8d9a7fd8b7443c8e39b55cc7947b649f36d9293030efbf3a6",
+      "bytes": 1242,
+      "role": "agent"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/code-refactoring/commands/context-restore.md",
+      "sha256": "184a7f9d2601ac066e2acd3b92c5b9638ba85d92b913a928a44e41fcad90afeb",
+      "bytes": 5521,
+      "role": "command"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/code-refactoring/commands/refactor-clean.md",
+      "sha256": "5a2b4965abd44895f5d19da185ab6b39db1db3d65ad532f9fd655b4dcd535937",
+      "bytes": 23266,
+      "role": "command"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/code-refactoring/commands/tech-debt.md",
+      "sha256": "5fbff524acf9d98fa824cd6a331385b7ddea74e12eb2912958dd17cd345c67c4",
+      "bytes": 9864,
+      "role": "command"
+    }
+  ],
+  "reference_license_records": [
+    {
+      "source_path": "mirrors/wshobson-agents/LICENSE",
+      "retained_path": "LICENSE.upstream",
+      "sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746"
+    }
+  ],
+  "release_file_sha256": {
+    ".claude-plugin/plugin.json": "421f5c346fc33324e66500bdb12ab28950d0cfd4bf7f912cb60ab48621e00339",
+    "LICENSE": "25321fa2e29c497c10d7fc25c5353b7e3222bc6fefb49439c7b2d46b317711e0",
+    "LICENSE.upstream": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+    "README.md": "40f669cf53f6bc075f53a3c1c1858f46df5844b7efdfd53b16456e422cb3de8c",
+    "RELEASE.md": "48769a1a5323025d7db9be72ab8f31db318c8335ac72aa0307cbc96f377a5cfe",
+    "skills/behavior-preserving-refactor/SKILL.md": "22364690b80ac96a3041aaf6167751da28f393dd8df5a2abe92c47c5c172a09e",
+    "skills/behavior-preserving-refactor/references/equivalence.md": "1e447c1e77e33d18170e90939f5fda2ff469029750a679c3986fe9e04c7bafba",
+    "skills/code-refactoring/SKILL.md": "ef33021160587622cda16e8dcef45a762b8565e42daf5bebe263042b931476b5",
+    "skills/context-rehydration/SKILL.md": "ed1366c53476d50cb722ea6185074d7da239dd618f1fbe2c88933fc88402b8cc",
+    "skills/legacy-migration/SKILL.md": "35ca3674f5d91f75e8d19af65c25889f6b8ecfdd289ab519956492f71992ba61",
+    "skills/refactoring-review/SKILL.md": "32e31bd749d3a3000c7f24d323acb5a1b82daa8e5c97ce6ec06e9527b6b20655",
+    "skills/technical-debt-planning/SKILL.md": "179c652e00c5411b16feb1d38cb3b42336b371e34c30517ba43cf97b69440565"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "category": "productivity",
+  "description": "Bounded Word, spreadsheet, presentation and PDF workflows. Beta; Python/Node dependencies must be provisioned separately.",
+  "descriptionI18n": {
+    "zh-CN": "文档助手：Word、Excel、PowerPoint、PDF 的有限处理流程。测试版，需要另行配置 Python／Node 依赖。"
+  },
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/documents.svg"
+}

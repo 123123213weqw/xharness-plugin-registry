@@ -1,0 +1,74 @@
+{
+  "release_channel": "beta",
+  "source_repository": "https://github.com/123123213weqw/xharness-plugins",
+  "reference_commit": "903913d6ec14c752be7470df06609bf2796eaa79",
+  "reference_family": "anthropics-claude-code/pr-review-toolkit",
+  "method": "Independent XHarness workflow guidance and own support code; reference vendor executables are not bundled or executed.",
+  "upstream_notices_retained": true,
+  "full_source_platform_or_license_equivalence_claimed": false,
+  "scope": "Finite tested capabilities only. Read RELEASE.md for prerequisites and unsupported behavior.",
+  "reference_source_files": [
+    {
+      "path": "mirrors/anthropics-claude-code/plugins/pr-review-toolkit/.claude-plugin/plugin.json",
+      "sha256": "9435cc134fc72d56175f222894d401b0cf20f700d5bc0098c4257455314695ca",
+      "bytes": 282
+    },
+    {
+      "path": "mirrors/anthropics-claude-code/plugins/pr-review-toolkit/agents/code-reviewer.md",
+      "sha256": "533b9967ca21b7e9572236935cada4bfd03d7dd362cb2e680a2d13aa0d699232",
+      "bytes": 3985
+    },
+    {
+      "path": "mirrors/anthropics-claude-code/plugins/pr-review-toolkit/agents/code-simplifier.md",
+      "sha256": "da129a12e959b059a7605d093fbc4f8710755ebf0c914ebc3102b5f78831ead1",
+      "bytes": 5230
+    },
+    {
+      "path": "mirrors/anthropics-claude-code/plugins/pr-review-toolkit/agents/comment-analyzer.md",
+      "sha256": "da0540c507e42a7f66df0b09f81f3c9d3b246620a8f2be4e84b85b97f7b4e2f5",
+      "bytes": 5725
+    },
+    {
+      "path": "mirrors/anthropics-claude-code/plugins/pr-review-toolkit/agents/pr-test-analyzer.md",
+      "sha256": "d369fd3946a814bb7a9d4f32e971722fe259e301878986bc6312d6f6c56014a8",
+      "bytes": 4985
+    },
+    {
+      "path": "mirrors/anthropics-claude-code/plugins/pr-review-toolkit/agents/silent-failure-hunter.md",
+      "sha256": "fa9b0daec5a267e7e66435cc48b3328301fc9f70c3af259fe248881327a1babc",
+      "bytes": 7807
+    },
+    {
+      "path": "mirrors/anthropics-claude-code/plugins/pr-review-toolkit/agents/type-design-analyzer.md",
+      "sha256": "ad160052fd3b45395d531d5e97e54940a1b660443fb513db3feb613848b6e72d",
+      "bytes": 5368
+    },
+    {
+      "path": "mirrors/anthropics-claude-code/plugins/pr-review-toolkit/commands/review-pr.md",
+      "sha256": "5e70c17293a044e1bf9d092c80b5da8b4fd5802ebb07dc53993dec4ba7ce2fc4",
+      "bytes": 4997
+    }
+  ],
+  "reference_license_records": [
+    {
+      "source_path": "mirrors/anthropics-claude-code/LICENSE.md",
+      "retained_path": "licenses/mirrors__anthropics-claude-code__LICENSE.md",
+      "sha256": "7554b481669cb43bdf3e6043c6740cd9184665c1a2b5054a494322ba7317bc8b"
+    }
+  ],
+  "release_file_sha256": {
+    ".claude-plugin/plugin.json": "809ae9fd928c3fe9bf169dba56df2658a87ed2c4d369a4ab09fcf177f4688477",
+    "LICENSE": "25321fa2e29c497c10d7fc25c5353b7e3222bc6fefb49439c7b2d46b317711e0",
+    "README.md": "7ce5da67d9fb4000126570f1d14fa3cb93482f84d38ac4322921ae86fe74ff64",
+    "RELEASE.md": "fa486599ab04f27c05350699c1b6229261d494783af6cd2447a5781db58dd694",
+    "licenses/mirrors__anthropics-claude-code__LICENSE.md": "7554b481669cb43bdf3e6043c6740cd9184665c1a2b5054a494322ba7317bc8b",
+    "skills/pr-code-review/SKILL.md": "19fb510ba97124cffe18d2fcfd669f0103647350aaaee6e73aa82f4d14ebd2c0",
+    "skills/pr-code-simplify/SKILL.md": "1eabbf6e7f3e8113afd9c0eacde87a3e597c33f411db994a8a86870d90009283",
+    "skills/pr-comment-review/SKILL.md": "0db4ed9ede1586d8d73f4ff2fd684918a7ccfaf0bfbec9fe8515ec4f9c33a815",
+    "skills/pr-error-review/SKILL.md": "65e6d3999dab61cb3eec3a9ba8cd3375bb39c5c348d3e935108783937293a789",
+    "skills/pr-review/SKILL.md": "26af3bde52d9a3846d702e1ebfe1a358024d199a62f5364c62bb07b7cfe0c60a",
+    "skills/pr-review-orchestrate/SKILL.md": "4b4caee44be75dc5d7b2d1e05c5bd2ed9bdd0b7a803cb69c3f99e0fd4c867e46",
+    "skills/pr-test-review/SKILL.md": "757992118106d7ca10fcc50609e34a9ee2ab3fad61465e44365b772c24d0fc41",
+    "skills/pr-type-review/SKILL.md": "21766111e70676231ec8ecda86e01afcea43589f4e86f04193c534b52e0d44bc"
+  }
+}

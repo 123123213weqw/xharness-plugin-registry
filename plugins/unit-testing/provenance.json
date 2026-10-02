@@ -1,0 +1,62 @@
+{
+  "release_channel": "beta",
+  "source_repository": "https://github.com/123123213weqw/xharness-plugins",
+  "reference_commit": "903913d6ec14c752be7470df06609bf2796eaa79",
+  "reference_family": "wshobson-agents/unit-testing",
+  "method": "Independent XHarness workflow guidance and own support code; reference vendor executables are not bundled or executed.",
+  "upstream_notices_retained": true,
+  "full_source_platform_or_license_equivalence_claimed": false,
+  "scope": "Finite tested capabilities only. Read RELEASE.md for prerequisites and unsupported behavior.",
+  "reference_source_files": [
+    {
+      "path": "mirrors/wshobson-agents/plugins/unit-testing/.claude-plugin/plugin.json",
+      "sha256": "feb0653f74fda3cafffe0eeaeadd0120fdb21b93e119a02e802fbd10c1a423a9",
+      "bytes": 258,
+      "role": "manifest"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/unit-testing/.codex-plugin/plugin.json",
+      "sha256": "b7f3977771e5c3595968c7dd0dcdcaf8bc84b5e29aff222c346b7bd740980b98",
+      "bytes": 478,
+      "role": "manifest"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/unit-testing/agents/debugger.md",
+      "sha256": "f6f709ce2e4a7ccc76c6080977c4a72e7a724c5074a0c073b5b80dab7ed22c0b",
+      "bytes": 797,
+      "role": "agent"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/unit-testing/agents/test-automator.md",
+      "sha256": "439a44edf224638acaefd241258b6dc189b4f7ade5427ebc9d29b04e7f532017",
+      "bytes": 10653,
+      "role": "agent"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/unit-testing/commands/test-generate.md",
+      "sha256": "1b661b2eb4cbfe637d23872eac284e7e139e4eb06a85573482794db7fdb7f87d",
+      "bytes": 10600,
+      "role": "command"
+    }
+  ],
+  "reference_license_records": [
+    {
+      "source_path": "mirrors/wshobson-agents/LICENSE",
+      "retained_path": "LICENSE.upstream",
+      "sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746"
+    }
+  ],
+  "release_file_sha256": {
+    ".claude-plugin/plugin.json": "f64160e448d048d9c7f08890afde3a1f3727f46f8087bf76844c22ed6257e9c1",
+    "LICENSE": "25321fa2e29c497c10d7fc25c5353b7e3222bc6fefb49439c7b2d46b317711e0",
+    "LICENSE.upstream": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+    "README.md": "ca6ea5a3f48814fde7f55bfa4c5cf12a7281da384db4fce0fbc85b3605d32280",
+    "RELEASE.md": "8a1f3fd1c2b03e40bbaca9eedb21cbd3c80240ab0a5695a6c55cccb077019f47",
+    "skills/behavior-test-generation/SKILL.md": "4c7bafc813892ef2abd0892f489fce1d7aedfd325905d65f14bb8ca0cf5c0a9c",
+    "skills/behavior-test-generation/references/suite-evidence.md": "27e9548bee20deca5612529243e1e57a6ddaf2ddc25d7cf645853ca01214a8e9",
+    "skills/test-failure-diagnosis/SKILL.md": "f8a253b097bc3031f07e86c29bc4a3096ae04012682fd4ece88f112958208889",
+    "skills/testing-strategy/SKILL.md": "53c93068ec2c19d0f26404fb9f011eb9be990971996d3e730d63f8c71135260e",
+    "skills/testing-strategy/references/strategy.md": "e999c2b5e346019bd83f82c5812c8c361fc26aaa30ac62abe81c042f908896b8",
+    "skills/unit-testing/SKILL.md": "0cf19b3e98a75621ee8f7b38c60960809fd310c0af6a7f3c271a4b5590153df3"
+  }
+}

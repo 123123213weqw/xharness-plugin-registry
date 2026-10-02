@@ -1,0 +1,9 @@
+# Findings, validation and unperformed checks
+
+A useful finding connects input → operation → violated invariant. For SQL, distinguish bound values from SQL fragments and check object ownership in the query or surrounding authorization. For credentials, establish real secret/exposure context rather than flag an example label. For async/resource logic, identify ownership and failure/cancellation cleanup. For infrastructure/CI, establish which principal executes which untrusted code and with which permissions. A large function or log call alone is not a vulnerability.
+
+Line references must refer to the reviewed source side and an existing executable/configuration location. Read the full function and caller before deciding a line lacks validation or error handling; a surrounding guard may satisfy the invariant. Do not infer deployed status codes, leaks, data volume or exploitability from missing framework context.
+
+Remediation validation uses independent behavioral examples: valid and invalid inputs, wrong owner/not-found, adversarial values, resource cleanup, failure propagation or compatibility. Apply a proposed patch in a disposable copy, verify its exact changed paths, execute only in the authorized environment, and preserve the reviewed repository. Include unsuccessful patch/tests as evidence. Do not run Rust locally; route Rust compiler checks through the user's required remote host.
+
+External analyzers, AI review products, framework checks, load tests, compliance audits and provider gates each have their own prerequisites. Inventory them as `ran`, `unavailable`, `not_authorized` or `not_applicable`, with evidence paths for `ran`. Do not convert tool absence into a security pass. Multilanguage, cloud and regulatory coverage need dedicated cases and real environments; a local Python/Git fixture does not establish them.

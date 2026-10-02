@@ -1,0 +1,8 @@
+{
+  "category": "developer-tools",
+  "description": "Reproduce failures, investigate hypotheses and verify minimal repairs. Beta; root-cause reports can be wrong.",
+  "descriptionI18n": {
+    "zh-CN": "故障排查：复现、验证假设、最小修复与回归。测试版，根因结论需复核。"
+  },
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/debug.svg"
+}

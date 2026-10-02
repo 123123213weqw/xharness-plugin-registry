@@ -1,0 +1,32 @@
+{
+  "release_channel": "beta",
+  "source_repository": "https://github.com/123123213weqw/xharness-plugins",
+  "reference_commit": "903913d6ec14c752be7470df06609bf2796eaa79",
+  "reference_family": "vercel-labs-agent-browser/agent-browser",
+  "method": "Independent XHarness workflow guidance and own support code; reference vendor executables are not bundled or executed.",
+  "upstream_notices_retained": true,
+  "full_source_platform_or_license_equivalence_claimed": false,
+  "scope": "Finite tested capabilities only. Read RELEASE.md for prerequisites and unsupported behavior.",
+  "reference_source_files": [
+    {
+      "path": "mirrors/vercel-labs-agent-browser/skills/agent-browser/SKILL.md",
+      "sha256": "3a7520e64de2dfaa516b6721c001e84e06e3c06a187b82af029ae721540ebfac",
+      "bytes": 3457
+    }
+  ],
+  "reference_license_records": [
+    {
+      "source_path": "mirrors/vercel-labs-agent-browser/LICENSE",
+      "retained_path": "licenses/mirrors__vercel-labs-agent-browser__LICENSE",
+      "sha256": "014bb31e83d5c2e76aea1cc6e82217346ab41362f32cb355ad0f5c10aa0aeaff"
+    }
+  ],
+  "release_file_sha256": {
+    ".claude-plugin/plugin.json": "bd055a1053a465b3f39dc72ea4bc778dab514a3b755b16d655cb31e736b04c30",
+    "LICENSE": "25321fa2e29c497c10d7fc25c5353b7e3222bc6fefb49439c7b2d46b317711e0",
+    "README.md": "6882294b04d5f4fb43f4366f22450c64702755594494fa0b11e55ba840050e18",
+    "RELEASE.md": "3cf10644988fd6d56c69041cf8138c1a45d517419ae8f7bded1cf1aeaefc0515",
+    "licenses/mirrors__vercel-labs-agent-browser__LICENSE": "014bb31e83d5c2e76aea1cc6e82217346ab41362f32cb355ad0f5c10aa0aeaff",
+    "skills/browser-workflow/SKILL.md": "5dd638badd79bc6696ae3863899b588092bd7d6ed6521dbd34360da5a7326bbb"
+  }
+}

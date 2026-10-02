@@ -1,0 +1,10 @@
+{
+  "name": "browser",
+  "version": "0.1.0-beta.1",
+  "description": "Observed browser interaction guidance. Beta; requires an available browser automation backend, not bundled here.",
+  "license": "MIT",
+  "author": {
+    "name": "XHarness contributors"
+  },
+  "skills": "./skills"
+}

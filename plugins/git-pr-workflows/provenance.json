@@ -1,0 +1,72 @@
+{
+  "release_channel": "beta",
+  "source_repository": "https://github.com/123123213weqw/xharness-plugins",
+  "reference_commit": "903913d6ec14c752be7470df06609bf2796eaa79",
+  "reference_family": "wshobson-agents/git-pr-workflows",
+  "method": "Independent XHarness workflow guidance and own support code; reference vendor executables are not bundled or executed.",
+  "upstream_notices_retained": true,
+  "full_source_platform_or_license_equivalence_claimed": false,
+  "scope": "Finite tested capabilities only. Read RELEASE.md for prerequisites and unsupported behavior.",
+  "reference_source_files": [
+    {
+      "path": "mirrors/wshobson-agents/plugins/git-pr-workflows/.claude-plugin/plugin.json",
+      "sha256": "52f97b90d2af13e0b99980154f047f1c03d9ea2a0980cefa8a8e21d28675954f",
+      "bytes": 257,
+      "role": "manifest"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/git-pr-workflows/.codex-plugin/plugin.json",
+      "sha256": "e193af48911cdba51dc89ecfd0fe00543ce073ac105eda58063bdd5ea1a358e7",
+      "bytes": 476,
+      "role": "manifest"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/git-pr-workflows/agents/code-reviewer.md",
+      "sha256": "0c96c9d4433f4a380ac613c1185573fc6d2097e6d01d1e43a9617042560deb94",
+      "bytes": 8432,
+      "role": "agent"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/git-pr-workflows/commands/git-workflow.md",
+      "sha256": "f34ec0500806940139c1dfc47f491bba77831ca2b555f014398e945f5654570b",
+      "bytes": 17395,
+      "role": "command"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/git-pr-workflows/commands/onboard.md",
+      "sha256": "2855a6f2f6208cd623debc90084aaccd5df56df8dbb62dda8a8d96b23d4d074b",
+      "bytes": 14530,
+      "role": "command"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/git-pr-workflows/commands/pr-enhance.md",
+      "sha256": "f33c2c3a92c2d11960171534b4304ce1e7b50cc6c640a640d27102af470474a6",
+      "bytes": 20050,
+      "role": "command"
+    }
+  ],
+  "reference_license_records": [
+    {
+      "source_path": "mirrors/wshobson-agents/LICENSE",
+      "retained_path": "LICENSE.upstream",
+      "sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746"
+    }
+  ],
+  "release_file_sha256": {
+    ".claude-plugin/plugin.json": "c1e18663582de4d7b5705836bbc9552a0ba737c9e18eb0d9d730746fdb6af918",
+    "LICENSE": "25321fa2e29c497c10d7fc25c5353b7e3222bc6fefb49439c7b2d46b317711e0",
+    "LICENSE.upstream": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+    "README.md": "1b8a979bc6fafc83d7e86ade5a3399e4f64d9fe0d3c30a163ad80a41ff3845ee",
+    "RELEASE.md": "8f1243f732f84d0cc095f11755931092016a6190c8e17d1a3bbb6e8d852534f9",
+    "skills/change-review/SKILL.md": "15b60ae0677c5b41358b48de21a62f7b50c1f9b63a3337ab417ed0dc1d723746",
+    "skills/change-review/references/findings.md": "d0a43faf6e61d0669d8faea3e1115f02b4ef25a7bb05294cb2292171a99abd3c",
+    "skills/git-change-delivery/SKILL.md": "4c7f76f59a9ee711f68cdab4ec771dafa80783c8bfcac6a285e174b7d835945f",
+    "skills/git-change-delivery/references/operations.md": "71d6a9859d4a37cc3f93dde5c0aadebbc283ab340b186422455d55537f6a6d35",
+    "skills/git-change-delivery/scripts/snapshot.py": "5c3780d5af6ec7c6af33d933a7fd75939f33f00a403fb12c925907f2913f66ff",
+    "skills/git-pr-workflows/SKILL.md": "325c796baeec69eb6556b5562f769576376c693208a2bfdf4db07e7facfcde3d",
+    "skills/pr-evidence/SKILL.md": "d93ca95598c962904c7cc87a698ecf6c8274f1ecd04f871b433bc53c11869328",
+    "skills/pr-evidence/references/reporting.md": "d4280942e22ea4ae7a58d02a0d02f71e249eb9ddde3b198a3a42ab1f64420ec3",
+    "skills/project-onboarding/SKILL.md": "43b8fa8349188deefb5a9cc3f480607269e65824070b0c99640e5983836b369e",
+    "skills/project-onboarding/references/plan.md": "0744054db9c936b99c72810356666d2fea11c1a8da849776751765c513f7bb2a"
+  }
+}
