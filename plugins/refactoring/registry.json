@@ -1,0 +1,8 @@
+{
+  "category": "developer-tools",
+  "description": "Incremental behavior-preserving refactoring and migration planning. Beta; supported project tests remain authoritative.",
+  "descriptionI18n": {
+    "zh-CN": "代码重构：拆分职责、消除重复、渐进迁移并验证行为兼容。测试版。"
+  },
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/refactor.svg"
+}

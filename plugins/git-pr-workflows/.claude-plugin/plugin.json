@@ -1,0 +1,10 @@
+{
+  "name": "git-pr-workflows",
+  "version": "0.1.0-beta.1",
+  "description": "Git change delivery and evidence-grounded PR preparation. Beta; external workflows are not fully validated.",
+  "license": "MIT",
+  "author": {
+    "name": "XHarness contributors"
+  },
+  "skills": "./skills"
+}

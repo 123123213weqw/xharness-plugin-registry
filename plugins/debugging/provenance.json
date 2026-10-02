@@ -1,0 +1,60 @@
+{
+  "release_channel": "beta",
+  "source_repository": "https://github.com/123123213weqw/xharness-plugins",
+  "reference_commit": "903913d6ec14c752be7470df06609bf2796eaa79",
+  "reference_family": "wshobson-agents/debugging-toolkit",
+  "method": "Independent XHarness workflow guidance and own support code; reference vendor executables are not bundled or executed.",
+  "upstream_notices_retained": true,
+  "full_source_platform_or_license_equivalence_claimed": false,
+  "scope": "Finite tested capabilities only. Read RELEASE.md for prerequisites and unsupported behavior.",
+  "reference_source_files": [
+    {
+      "path": "mirrors/wshobson-agents/plugins/debugging-toolkit/.claude-plugin/plugin.json",
+      "sha256": "1a46d4cbb832f886a7dac211068b5e91b904e73fa76e16ff85b3e2b0a9288003",
+      "bytes": 265,
+      "role": "manifest"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/debugging-toolkit/.codex-plugin/plugin.json",
+      "sha256": "9460e1c024a60f49de55d22b0a57740b671c42c6227e48afc176bb406a923ae5",
+      "bytes": 492,
+      "role": "manifest"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/debugging-toolkit/agents/debugger.md",
+      "sha256": "3d0e9b906e5f5e29e76758cf5b170023c5cbd9f2d908bfd8263043e60d342f87",
+      "bytes": 802,
+      "role": "agent"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/debugging-toolkit/agents/dx-optimizer.md",
+      "sha256": "e73628c53dbbb11afb15374a6de9d85446d38ceaf48b5c7d541879b3438f4461",
+      "bytes": 1797,
+      "role": "agent"
+    },
+    {
+      "path": "mirrors/wshobson-agents/plugins/debugging-toolkit/commands/smart-debug.md",
+      "sha256": "ace177efe94a7644494cf979d3ab3a459271696771561b515f2482e583a70af4",
+      "bytes": 5741,
+      "role": "command"
+    }
+  ],
+  "reference_license_records": [
+    {
+      "source_path": "mirrors/wshobson-agents/LICENSE",
+      "retained_path": "LICENSE.upstream",
+      "sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746"
+    }
+  ],
+  "release_file_sha256": {
+    ".claude-plugin/plugin.json": "830d1e8f40e0f6e04bd7a66af07942a2e732023a8c68f13a89d834407968dedd",
+    "LICENSE": "25321fa2e29c497c10d7fc25c5353b7e3222bc6fefb49439c7b2d46b317711e0",
+    "LICENSE.upstream": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+    "README.md": "f98159abe955e041665be13bfcbadc92c3648493bb5a6412fafd07f34b64971c",
+    "RELEASE.md": "df1111decdd9b9675ecb027e0607aaa5a47c92e62cd712a9f4481b550b7a8c85",
+    "skills/debugging-toolkit/SKILL.md": "7a54562b5f3919ca4e0c002c0519a6c3c82e93323d33a5dd42d619d44e448c93",
+    "skills/developer-experience/SKILL.md": "a27597500ae0fd61ce64f9766ef545bdc9b5ad84e250fc2471aeb57f99e237e9",
+    "skills/diagnostic-debugging/SKILL.md": "2552c9a833624dc7d5a620c3db7f0dfb8637d9c8ea0027cf3af43fce84980a6e",
+    "skills/diagnostic-debugging/references/investigation.md": "048d4ab722350a733d4974fa66096600e6926b615cba9c2dd0679e9f0f950502"
+  }
+}

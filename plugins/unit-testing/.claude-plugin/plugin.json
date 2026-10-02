@@ -1,0 +1,10 @@
+{
+  "name": "unit-testing",
+  "version": "0.1.0-beta.1",
+  "description": "Behavior-grounded test generation and failure diagnosis. Beta; test coverage and report claims require verification.",
+  "license": "MIT",
+  "author": {
+    "name": "XHarness contributors"
+  },
+  "skills": "./skills"
+}

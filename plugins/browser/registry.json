@@ -1,0 +1,8 @@
+{
+  "category": "developer-tools",
+  "description": "Observed browser interaction guidance. Beta; requires an available browser automation backend, not bundled here.",
+  "descriptionI18n": {
+    "zh-CN": "浏览器助手：观察、交互与结果验证。测试版，需可用的浏览器执行后端，不内置浏览器。"
+  },
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/browser.svg"
+}

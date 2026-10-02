@@ -12,4 +12,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: python3 scripts/test_registry.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: python3 -m compileall -q plugins/documents/skills
+      - run: node --check plugins/documents/skills/pptx/scripts/pptx_tool.mjs
+      - run: node --check plugins/documents/skills/xlsx/scripts/xlsx_tool.mjs
       - run: git diff --exit-code

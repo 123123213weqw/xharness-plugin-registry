@@ -1,0 +1,8 @@
+{
+  "category": "developer-tools",
+  "description": "Git change delivery and evidence-grounded PR preparation. Beta; external workflows are not fully validated.",
+  "descriptionI18n": {
+    "zh-CN": "Git／PR 工作流：整理变更、提交与 PR 证据。测试版，远端完整流程仍在验收。"
+  },
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/git-branch.svg"
+}

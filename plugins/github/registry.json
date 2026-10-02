@@ -1,0 +1,8 @@
+{
+  "category": "developer-tools",
+  "description": "GitHub CLI workflows for commits, PRs, Issues, releases and Actions. Requires gh and user-owned authentication.",
+  "descriptionI18n": {
+    "zh-CN": "GitHub CLI 工作流：提交、PR、Issue、发布及 Actions。需要 gh 和用户自己的授权。"
+  },
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/github.svg"
+}

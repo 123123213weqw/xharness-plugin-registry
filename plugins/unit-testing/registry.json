@@ -1,0 +1,8 @@
+{
+  "category": "developer-tools",
+  "description": "Behavior-grounded test generation and failure diagnosis. Beta; test coverage and report claims require verification.",
+  "descriptionI18n": {
+    "zh-CN": "单元测试：补行为、边界和异常测试，诊断测试失败。测试版，覆盖声明需实际验证。"
+  },
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/test.svg"
+}

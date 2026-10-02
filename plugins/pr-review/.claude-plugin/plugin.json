@@ -1,0 +1,10 @@
+{
+  "name": "pr-review",
+  "version": "0.1.0-beta.1",
+  "description": "Review code, tests, errors, comments and types with source-located findings. Beta; review-only unless edits are requested.",
+  "license": "MIT",
+  "author": {
+    "name": "XHarness contributors"
+  },
+  "skills": "./skills"
+}
