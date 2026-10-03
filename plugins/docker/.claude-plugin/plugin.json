@@ -1,0 +1,10 @@
+{
+  "name": "docker",
+  "version": "0.1.0-beta.1",
+  "description": "Inspect Compose services, diagnose container failures and verify scoped configuration changes. Beta; Docker Engine/Compose are not bundled.",
+  "license": "MIT",
+  "author": {
+    "name": "XHarness contributors"
+  },
+  "skills": "./skills"
+}

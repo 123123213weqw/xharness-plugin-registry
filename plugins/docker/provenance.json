@@ -1,0 +1,20 @@
+{
+  "release_channel": "beta",
+  "method": "Original XHarness workflow guidance and stdlib support code; primary documentation informs protocol semantics, no third-party runtime/source bundled.",
+  "reference_documentation": [
+    "https://docs.docker.com/reference/cli/docker/compose/ps/"
+  ],
+  "full_source_platform_or_license_equivalence_claimed": false,
+  "scope": "Finite helper tests, not full schema/engine/daemon/model acceptance; see RELEASE.md.",
+  "release_file_sha256": {
+    ".claude-plugin/plugin.json": "39d03c34e694ff41aca8ea03b3a86db55ee118d52e4e77565b075c838ba7568b",
+    "LICENSE": "25321fa2e29c497c10d7fc25c5353b7e3222bc6fefb49439c7b2d46b317711e0",
+    "README.md": "a54bec017e8d714fc391e3406d9be81d7964972075909fc4a467688280167cdb",
+    "RELEASE.md": "dad49f660cb74db30ea592355d1ab4b6a689dd818f6b2e2ecbaffe8f6a0c1b9e",
+    "skills/compose-changes/SKILL.md": "3f8c5545659d7413b2a7d0b0f5c76a32d4413364ead57a78012c9f404f44665f",
+    "skills/compose-inspection/SKILL.md": "63c35c909c82f2c074dd63523080da7cd7bf67de5ce1de8fd24f5b818d79d93e",
+    "skills/compose-inspection/references/workflow.md": "5858cc7440ce5e43d58422caeb808a820906a910825991844b96ff85345239a3",
+    "skills/compose-inspection/scripts/compose_state.py": "4c32f5eee3b889bf440ac198f230d06e5cadb3e60b20435ec4763153183b5ae2",
+    "skills/container-diagnosis/SKILL.md": "5601acc298a0fe9133eca4c184ee070899b126e8745ce5cbda4d3ca77c7ff736"
+  }
+}

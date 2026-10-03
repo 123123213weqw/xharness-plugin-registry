@@ -1,0 +1,20 @@
+{
+  "release_channel": "beta",
+  "method": "Original XHarness workflow guidance and stdlib support code; primary documentation informs protocol semantics, no third-party runtime/source bundled.",
+  "reference_documentation": [
+    "https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.set_authorizer"
+  ],
+  "full_source_platform_or_license_equivalence_claimed": false,
+  "scope": "Finite helper tests, not full schema/engine/daemon/model acceptance; see RELEASE.md.",
+  "release_file_sha256": {
+    ".claude-plugin/plugin.json": "963a73d8ec32a21cea5cbb2e90c8977e143e3705209aeb75121eb9b21581f6a2",
+    "LICENSE": "25321fa2e29c497c10d7fc25c5353b7e3222bc6fefb49439c7b2d46b317711e0",
+    "README.md": "4eda4fad3f4d9d5a7a88f66655690e90adbf0c1f4009ab9b283c3d20d3e16bdb",
+    "RELEASE.md": "5231f2838af28c14db4b66de295a59ef3f699b2c633979dbc005bf4e32a4522c",
+    "skills/database-inspection/SKILL.md": "32ef1cdb2ad56762b5817d9d003a42e1834d37a4296a063f44e0cf3e719bb0a0",
+    "skills/database-inspection/references/workflow.md": "61c83dfaffe67b3b0ae29e46ee317e0c6f8b6614c0334924fc5b74a18a6fb0cb",
+    "skills/database-inspection/scripts/sqlite_read.py": "1811ec5b33e60a8dc74ca866bee4c4b225fb41e88d2df3a358217b7490f8356c",
+    "skills/migration-review/SKILL.md": "99286111594f7da0f4fe808255d62183686c1514f362fef67c26d0b7f84f35cb",
+    "skills/query-diagnosis/SKILL.md": "570735ff7bee83fb2de03f876584be09c7c43231689dfe42188ff2952dea1897"
+  }
+}

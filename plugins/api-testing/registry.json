@@ -1,0 +1,8 @@
+{
+  "category": "developer-tools",
+  "description": "Read OpenAPI contracts, probe HTTP endpoints and build evidence-bound API regressions. Beta; Python 3 and project-specific validators are separate prerequisites.",
+  "descriptionI18n": {
+    "zh-CN": "API 联调：契约检查、HTTP 探测与接口回归。测试版。"
+  },
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/api.svg"
+}

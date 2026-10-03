@@ -1,0 +1,20 @@
+{
+  "release_channel": "beta",
+  "method": "Original XHarness workflow guidance and stdlib support code; primary documentation informs protocol semantics, no third-party runtime/source bundled.",
+  "reference_documentation": [
+    "https://learn.openapis.org/specification/paths.html"
+  ],
+  "full_source_platform_or_license_equivalence_claimed": false,
+  "scope": "Finite helper tests, not full schema/engine/daemon/model acceptance; see RELEASE.md.",
+  "release_file_sha256": {
+    ".claude-plugin/plugin.json": "573be39c5d6b5ef3e685c5c296902cce3638473f191c760a0ae26a26847c6d01",
+    "LICENSE": "25321fa2e29c497c10d7fc25c5353b7e3222bc6fefb49439c7b2d46b317711e0",
+    "README.md": "a6e2faab837c0ef0521a0d57ef55151defc179d4acb378d6aa3ee85f48ba9aa3",
+    "RELEASE.md": "8446391bd956ed1c6628769d5959a85e90bf547cb665c8d57c78fd9087dd9a54",
+    "skills/api-contract/SKILL.md": "c0c94842c4ffe93f01091227ddc4d2af4640fb0ffa0470fe8a70f0f6ed08cdf7",
+    "skills/api-contract/references/workflow.md": "1c5df3501fe2623191e144e2edc2b79b68bf9ae2d299d0cdc38322eed422c078",
+    "skills/api-contract/scripts/api_tool.py": "e8416e85420db577feb8130381b0a24a9a526ba10dc275637eb5b0f446282d4d",
+    "skills/api-probe/SKILL.md": "3a87b87dd50301b3a0a58acf2a06ea8a995cfd6ed24a4b3bbe8321c55cf957dd",
+    "skills/api-regression/SKILL.md": "460bb16634830859f71cf3aa8751734be7cb59579128e9bdd7ae166c38757d27"
+  }
+}

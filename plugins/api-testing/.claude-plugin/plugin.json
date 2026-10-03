@@ -1,0 +1,10 @@
+{
+  "name": "api-testing",
+  "version": "0.1.0-beta.1",
+  "description": "Read OpenAPI contracts, probe HTTP endpoints and build evidence-bound API regressions. Beta; Python 3 and project-specific validators are separate prerequisites.",
+  "license": "MIT",
+  "author": {
+    "name": "XHarness contributors"
+  },
+  "skills": "./skills"
+}

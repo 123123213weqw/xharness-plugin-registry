@@ -4,7 +4,7 @@ from pathlib import Path, PurePosixPath
 import build_catalog
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED = {'github':10,'git-pr-workflows':5,'pr-review':8,'unit-testing':4,
-            'debugging':3,'refactoring':6,'documents':4,'browser':1}
+            'debugging':3,'refactoring':6,'documents':4,'browser':1,'api-testing':3,'database':3,'docker':3}
 SECRET = re.compile(rb'(?:sk-[0-9a-fA-F]{32}|gh[pousr]_[A-Za-z0-9]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)')
 FORBIDDEN = {'.git','node_modules','target','__pycache__','spend.sqlite','.env'}
 class RegistryTest(unittest.TestCase):

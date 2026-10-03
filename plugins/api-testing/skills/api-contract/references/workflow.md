@@ -1,0 +1,11 @@
+# API workflow and evidence
+
+1. Select the current repository, API environment and operation. Read actual OpenAPI/security metadata and existing clients. Do not import an unrelated old task or guess an account.
+2. `python scripts/api_tool.py index openapi.json` only indexes JSON OpenAPI 3.x Paths/operations. It explicitly reports unresolved Path Item references; it does not resolve schemas, implement YAML or validate an entire contract. Prefer the project's installed compatible parser/validator for those tasks.
+3. `python scripts/api_tool.py probe https://example.test/health --timeout 15 --max-bytes 65536` makes one GET. `--method HEAD` inspects the same endpoint without a response body. `--header-env Authorization=API_AUTH` reads the full header value from an existing Host environment variable. Missing variables fail before sending. No credentials are written into the package or emitted as headers; echoed bound header values are redacted from bodies.
+4. The timeout applies to network socket operations, not a guarantee about operating-system DNS resolution. Use the Host command's overall timeout as well. HTTP 4xx/5xx, redirects, transport failure, incomplete body and body size truncation are not silently retried or treated as success. Redirects are reported, not followed automatically. The helper uses the environment's standard proxy/TLS configuration and does not disable certificate checks.
+5. The helper does not send POST/PUT/PATCH/DELETE. Use the project client or existing Host tools for explicitly requested writes, with disposable test records and verified cleanup. Unknown write outcomes are not permission to repeat them.
+6. Validate response status, content type, parsed body and the intended business result with the project's actual validator/test runner. Save only necessary redacted evidence. Truncated body text is not a complete JSON response; bytes are not token counts.
+7. Report the endpoint/method without credential-bearing query values, command, actual exit, assertions and limitations. A successful mock or a helper's `ok` is not an all-endpoint or model-quality certification.
+
+Reference: [OpenAPI Paths](https://learn.openapis.org/specification/paths.html). The helper is original XHarness support code, not a replacement OpenAPI implementation.

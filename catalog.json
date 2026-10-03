@@ -1,6 +1,25 @@
 {
   "plugins": [
     {
+      "name": "api-testing",
+      "version": "0.1.0-beta.1",
+      "category": "developer-tools",
+      "description": "Read OpenAPI contracts, probe HTTP endpoints and build evidence-bound API regressions. Beta; Python 3 and project-specific validators are separate prerequisites.",
+      "descriptionI18n": {
+        "zh-CN": "API 联调：契约检查、HTTP 探测与接口回归。测试版。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/api.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/api-testing/0.1.0-beta.1/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/api-testing/0.1.0-beta.1/plugin.zip"
+        ],
+        "sha256": "6fcd97e26313e8feb31ea9d92849577aaffc6f8822bcd67b5b867f1829c3ad10"
+      }
+    },
+    {
       "name": "browser",
       "version": "0.1.0-beta.1",
       "category": "developer-tools",
@@ -20,6 +39,25 @@
       }
     },
     {
+      "name": "database",
+      "version": "0.1.0-beta.1",
+      "category": "developer-tools",
+      "description": "Inspect databases, diagnose queries and review migrations. Beta; bundled execution is read-only SQLite, other engines require their own clients.",
+      "descriptionI18n": {
+        "zh-CN": "数据库助手：结构查看、只读查询、执行计划与迁移审查。测试版。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/database.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/database/0.1.0-beta.1/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/database/0.1.0-beta.1/plugin.zip"
+        ],
+        "sha256": "e1dda90210d67c3654ae7bb7d574170bc7a91faa2a7d5b5d46e1125645859bf0"
+      }
+    },
+    {
       "name": "debugging",
       "version": "0.1.0-beta.1",
       "category": "developer-tools",
@@ -36,6 +74,25 @@
           "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/debugging/0.1.0-beta.1/plugin.zip"
         ],
         "sha256": "69a1a49ca91f195d4b662d94574f8eb0ea06e0b776166446578104378784e33b"
+      }
+    },
+    {
+      "name": "docker",
+      "version": "0.1.0-beta.1",
+      "category": "developer-tools",
+      "description": "Inspect Compose services, diagnose container failures and verify scoped configuration changes. Beta; Docker Engine/Compose are not bundled.",
+      "descriptionI18n": {
+        "zh-CN": "Docker 助手：Compose 状态、容器排障及变更验证。测试版。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/docker.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/docker/0.1.0-beta.1/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/docker/0.1.0-beta.1/plugin.zip"
+        ],
+        "sha256": "322e74ca7ab4b26b71429c4644f428dcafe6f19af5dae3ef1005cf550cc9a6c5"
       }
     },
     {
