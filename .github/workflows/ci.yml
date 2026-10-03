@@ -12,6 +12,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python3 scripts/test_registry.py
+      - run: python3 scripts/test_developer_plugins.py
       - uses: actions/setup-node@v4
         with:
           node-version: '20'

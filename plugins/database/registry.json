@@ -1,0 +1,8 @@
+{
+  "category": "developer-tools",
+  "description": "Inspect databases, diagnose queries and review migrations. Beta; bundled execution is read-only SQLite, other engines require their own clients.",
+  "descriptionI18n": {
+    "zh-CN": "数据库助手：结构查看、只读查询、执行计划与迁移审查。测试版。"
+  },
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/database.svg"
+}

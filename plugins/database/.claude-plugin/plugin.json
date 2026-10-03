@@ -1,0 +1,10 @@
+{
+  "name": "database",
+  "version": "0.1.0-beta.1",
+  "description": "Inspect databases, diagnose queries and review migrations. Beta; bundled execution is read-only SQLite, other engines require their own clients.",
+  "license": "MIT",
+  "author": {
+    "name": "XHarness contributors"
+  },
+  "skills": "./skills"
+}

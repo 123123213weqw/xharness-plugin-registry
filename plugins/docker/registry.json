@@ -1,0 +1,8 @@
+{
+  "category": "developer-tools",
+  "description": "Inspect Compose services, diagnose container failures and verify scoped configuration changes. Beta; Docker Engine/Compose are not bundled.",
+  "descriptionI18n": {
+    "zh-CN": "Docker 助手：Compose 状态、容器排障及变更验证。测试版。"
+  },
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/docker.svg"
+}
