@@ -1,0 +1,35 @@
+{
+  "sourceArchiveSha256": "c2f8f827f217a3c3b3b7ed263205947b7c601113a11d298a65dce03045f16a9f",
+  "upstream": "ad8c26442076e357f5bb88515b25dfbf73c81e2e",
+  "wordcraftVersion": "0.5.0",
+  "adapterVersion": "0.2.3",
+  "pluginVersion": "0.1.0",
+  "wasmUnchanged": true,
+  "patches": [
+    "relative streaming asset bootstrap",
+    "raw fallback assets without retained gzip cache",
+    "Host-injected session workspace launcher"
+  ],
+  "assetDigests": {
+    "dist/panel.html": {
+      "bytes": 652287,
+      "sha256": "21666f2cc07277a6ec379aba3a635abbfc9b8896c04453113ee417f26f259121",
+      "mime": "text/html"
+    },
+    "dist/wordcraft-fa59e09a3f921e03.ico": {
+      "bytes": 18378,
+      "sha256": "53a23dcf66260f44d87d4d143d633395f3e967f391eda47e6e9cc3a52f820225",
+      "mime": "image/x-icon"
+    },
+    "dist/wordcraft-web-884157b7af855c39_bg.wasm": {
+      "bytes": 88453355,
+      "sha256": "75040b8ed95370c8e2bb71b5572e3bbabd89193f140c5bd089249c7a1fc32e0e",
+      "mime": "application/wasm"
+    },
+    "dist/app.js": {
+      "bytes": 82022,
+      "sha256": "78458a3212bd89b5770f77dc6f977a4cf96920c96e40d24b07d7d49daee37eff",
+      "mime": "text/javascript"
+    }
+  }
+}

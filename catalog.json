@@ -208,6 +208,25 @@
         ],
         "sha256": "22d8d32377684b0101ca0e9248f367103ad258780733c2475a069f5bf04314df"
       }
+    },
+    {
+      "name": "wordcraft",
+      "version": "0.1.0",
+      "category": "productivity",
+      "description": "Optional live WordCraft DOCX editor. Requires XHarness panel support and an existing Node.js runtime; installed disabled, MCP permission and visible editor required. Experimental.",
+      "descriptionI18n": {
+        "zh-CN": "可选 WordCraft 可视化 DOCX 编辑器。需 XHarness 面板支持和已有 Node.js；默认关闭，需允许 MCP 并按需打开。实验功能。"
+      },
+      "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/documents.svg",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/packages/wordcraft/0.1.0/plugin.zip",
+        "mirrors": [
+          "https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/packages/wordcraft/0.1.0/plugin.zip"
+        ],
+        "sha256": "ed0879f7548b1ce7e7a4920f2b89a0d55fbac0e70ffa365a52d9d983a749e22d"
+      }
     }
   ]
 }
