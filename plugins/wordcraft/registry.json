@@ -4,5 +4,5 @@
   "descriptionI18n": {
     "zh-CN": "可选 WordCraft 可视化 DOCX 编辑器。需 XHarness 面板支持和已有 Node.js；默认关闭，需允许 MCP 并按需打开。实验功能。"
   },
-  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/documents.svg"
+  "icon": "https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/icons/wordcraft.svg"
 }
