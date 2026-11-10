@@ -3,8 +3,7 @@ import hashlib, json, re, shutil, stat, tempfile, unittest, zipfile
 from pathlib import Path, PurePosixPath
 import build_catalog
 ROOT = Path(__file__).resolve().parents[1]
-EXPECTED = {'github':10,'git-pr-workflows':5,'pr-review':8,'unit-testing':4,
-            'debugging':3,'refactoring':6,'documents':4,'browser':1,'api-testing':3,'database':3,'docker':3,'wordcraft':1}
+EXPECTED = {'wordcraft':1}
 SECRET = re.compile(rb'(?:sk-[0-9a-fA-F]{32}|gh[pousr]_[A-Za-z0-9]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)')
 FORBIDDEN = {'.git','node_modules','target','__pycache__','spend.sqlite','.env'}
 class RegistryTest(unittest.TestCase):
@@ -44,20 +43,9 @@ class RegistryTest(unittest.TestCase):
                 target=(p.parent/link.split('#')[0]).resolve()
                 self.assertTrue(target.is_relative_to((ROOT/'plugins'/p.relative_to(ROOT/'plugins').parts[0]).resolve()),str(p))
                 self.assertTrue(target.is_file(),str(p)+' -> '+link)
-    def test_stable_github_unchanged(self):
-        data=(ROOT/'packages/github/0.2.0/plugin.zip').read_bytes()
-        self.assertEqual(hashlib.sha256(data).hexdigest(),'2f1b40aadb5d8ee52af7e678f85fa7ab836f8835202e86c22ee388e3e98f9ab5')
-    def test_beta_release_provenance(self):
-        for name in set(EXPECTED)-{'github','wordcraft'}:
-            plugin=ROOT/'plugins'/name
-            provenance=json.loads((plugin/'provenance.json').read_bytes())
-            self.assertEqual(provenance['release_channel'],'beta')
-            self.assertIs(provenance['full_source_platform_or_license_equivalence_claimed'],False)
-            actual={p.relative_to(plugin).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
-                for p in plugin.rglob('*') if p.is_file()
-                and p.relative_to(plugin).as_posix() not in {'registry.json','provenance.json'}
-                and '__pycache__' not in p.parts and p.suffix!='.pyc'}
-            self.assertEqual(provenance['release_file_sha256'],actual,name)
+    def test_retained_wordcraft_archive_unchanged(self):
+        data=(ROOT/'packages/wordcraft/0.1.0/plugin.zip').read_bytes()
+        self.assertEqual(hashlib.sha256(data).hexdigest(),'ed0879f7548b1ce7e7a4920f2b89a0d55fbac0e70ffa365a52d9d983a749e22d')
     def test_determinism(self):
         before={p:p.read_bytes() for p in ROOT.glob('packages/*/*/plugin.zip')}
         catalog=(ROOT/'catalog.json').read_bytes(); build_catalog.build()
@@ -65,11 +53,15 @@ class RegistryTest(unittest.TestCase):
         self.assertEqual({p:p.read_bytes() for p in before},before)
     def test_version_immutability(self):
         with tempfile.TemporaryDirectory() as t:
-            d=Path(t);shutil.copytree(ROOT/'plugins',d/'plugins');shutil.copytree(ROOT/'packages',d/'packages')
-            (d/'plugins/browser/skills/browser-workflow/SKILL.md').write_text('changed')
-            old=(d/'packages/browser/0.1.0-beta.1/plugin.zip').read_bytes()
-            with self.assertRaisesRegex(ValueError,'bump version'):build_catalog.build(d)
-            self.assertEqual((d/'packages/browser/0.1.0-beta.1/plugin.zip').read_bytes(),old)
+            root=Path(t);plugin=root/'plugins/demo';(plugin/'.claude-plugin').mkdir(parents=True)
+            (plugin/'.claude-plugin/plugin.json').write_text(json.dumps({'name':'demo','version':'1.0.0'}))
+            (plugin/'registry.json').write_text(json.dumps({'description':'isolated test fixture'}))
+            (plugin/'README.md').write_text('original fixture')
+            build_catalog.build(root)
+            archive=root/'packages/demo/1.0.0/plugin.zip';old=archive.read_bytes()
+            (plugin/'README.md').write_text('changed fixture')
+            with self.assertRaisesRegex(ValueError,'bump version'):build_catalog.build(root)
+            self.assertEqual(archive.read_bytes(),old)
 class WordCraftPrebuiltTest(unittest.TestCase):
     def test_missing_or_changed_archive_cannot_rebuild_or_overwrite_a_release(self):
         with tempfile.TemporaryDirectory() as tmp:

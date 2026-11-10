@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://raw.githubusercontent.com/123123213weqw/xharness-plugin-registry/main/'
 MIRROR = 'https://gitee.com/api/v5/repos/wangyue2006/xharness-plugin-registry/contents/'
-EXCLUDED = {'registry.json'}  # catalogue-only; Github 0.2.0 archive stays unchanged
+EXCLUDED = {'registry.json'}  # listing-only metadata is never package payload
 
 def verified_prebuilt(plugin, target, name, version):
     """Reviewed compiled editor payload, not a source-reproducible WASM claim.
