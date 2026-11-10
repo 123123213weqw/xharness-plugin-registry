@@ -4,7 +4,7 @@ from pathlib import Path, PurePosixPath
 import build_catalog
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED = {'github':10,'git-pr-workflows':5,'pr-review':8,'unit-testing':4,
-            'debugging':3,'refactoring':6,'documents':4,'browser':1,'api-testing':3,'database':3,'docker':3}
+            'debugging':3,'refactoring':6,'documents':4,'browser':1,'api-testing':3,'database':3,'docker':3,'wordcraft':1}
 SECRET = re.compile(rb'(?:sk-[0-9a-fA-F]{32}|gh[pousr]_[A-Za-z0-9]{30,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)')
 FORBIDDEN = {'.git','node_modules','target','__pycache__','spend.sqlite','.env'}
 class RegistryTest(unittest.TestCase):
@@ -23,7 +23,7 @@ class RegistryTest(unittest.TestCase):
                 with zipfile.ZipFile(ROOT/relative) as z:
                     names=z.namelist(); self.assertEqual(len(names),len(set(names))); self.assertIsNone(z.testzip())
                     self.assertEqual(len([n for n in names if n.endswith('/SKILL.md')]), EXPECTED[name])
-                    self.assertIn(name+'/LICENSE',names); self.assertNotIn(name+'/.mcp.json',names)
+                    self.assertIn(name+'/LICENSE',names); self.assertEqual(name+'/.mcp.json' in names,name=='wordcraft')
                     self.assertNotIn(name+'/registry.json',names)
                     meta=json.loads(z.read(name+'/.claude-plugin/plugin.json'))
                     self.assertEqual((meta['name'],meta['version']),(name,p['version']))
@@ -32,7 +32,7 @@ class RegistryTest(unittest.TestCase):
                         self.assertTrue(n.startswith(name+'/'));self.assertFalse(FORBIDDEN.intersection(path.parts))
                         self.assertFalse(any(s.startswith('.env') for s in path.parts)); self.assertIsNone(SECRET.search(z.read(n)))
                         self.assertNotIn(b'/Users/wangyue/',z.read(n)); self.assertNotIn(b'/home/data/wangyue/',z.read(n))
-                    if name!='github':
+                    if name not in {'github','wordcraft'}:
                         self.assertIn('-beta.',p['version']); self.assertIn(name+'/RELEASE.md',names)
                         self.assertIn(b'Opt-in beta',z.read(name+'/RELEASE.md'))
     def test_skill_references_exist(self):
@@ -48,7 +48,7 @@ class RegistryTest(unittest.TestCase):
         data=(ROOT/'packages/github/0.2.0/plugin.zip').read_bytes()
         self.assertEqual(hashlib.sha256(data).hexdigest(),'2f1b40aadb5d8ee52af7e678f85fa7ab836f8835202e86c22ee388e3e98f9ab5')
     def test_beta_release_provenance(self):
-        for name in set(EXPECTED)-{'github'}:
+        for name in set(EXPECTED)-{'github','wordcraft'}:
             plugin=ROOT/'plugins'/name
             provenance=json.loads((plugin/'provenance.json').read_bytes())
             self.assertEqual(provenance['release_channel'],'beta')
@@ -70,4 +70,28 @@ class RegistryTest(unittest.TestCase):
             old=(d/'packages/browser/0.1.0-beta.1/plugin.zip').read_bytes()
             with self.assertRaisesRegex(ValueError,'bump version'):build_catalog.build(d)
             self.assertEqual((d/'packages/browser/0.1.0-beta.1/plugin.zip').read_bytes(),old)
+class WordCraftPrebuiltTest(unittest.TestCase):
+    def test_missing_or_changed_archive_cannot_rebuild_or_overwrite_a_release(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp); plugin=root/'wordcraft';shutil.copytree(ROOT/'plugins/wordcraft',plugin)
+            target=root/'plugin.zip'
+            with self.assertRaisesRegex(ValueError,'missing pinned'):build_catalog.verified_prebuilt(plugin,target,'wordcraft','0.1.0')
+            target.write_bytes(b'changed')
+            with self.assertRaisesRegex(ValueError,'archive changed'):build_catalog.verified_prebuilt(plugin,target,'wordcraft','0.1.0')
+            self.assertEqual(target.read_bytes(),b'changed')
+    def test_prebuilt_package_and_reviewed_metadata_are_both_bound(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            plugin=Path(tmp)/'wordcraft';shutil.copytree(ROOT/'plugins/wordcraft',plugin)
+            target=ROOT/'packages/wordcraft/0.1.0/plugin.zip'
+            (plugin/'RELEASE.md').write_text('unreviewed instructions')
+            with self.assertRaisesRegex(ValueError,'review metadata mismatch'):build_catalog.verified_prebuilt(plugin,target,'wordcraft','0.1.0')
+    def test_wordcraft_is_only_optional_stdio_with_reserved_workspace(self):
+        with zipfile.ZipFile(ROOT/'packages/wordcraft/0.1.0/plugin.zip') as archive:
+            config=json.loads(archive.read('wordcraft/.mcp.json'))
+            self.assertEqual(config,{'mcpServers':{'wordcraft':{'type':'stdio','command':'node','args':['${PLUGIN_ROOT}/dist/launch.mjs']}}})
+            launcher=archive.read('wordcraft/dist/launch.mjs')
+            self.assertIn(b'XHARNESS_PLUGIN_WORKSPACE',launcher)
+            self.assertNotIn(b'http:',launcher)
+            self.assertIn(b'No default enablement or host restart',archive.read('wordcraft/RELEASE.md'))
+
 if __name__=='__main__': unittest.main()

@@ -1,0 +1,6 @@
+{
+  "name": "wordcraft",
+  "version": "0.1.0",
+  "description": "Optional live WordCraft document editor. Disabled until explicitly authorized and opened.",
+  "license": "MIT OR Apache-2.0"
+}
